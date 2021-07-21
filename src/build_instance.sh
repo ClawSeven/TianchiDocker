@@ -7,9 +7,12 @@ occlum_glibc=/opt/occlum/glibc/lib/
 
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}"  )" >/dev/null 2>&1 && pwd )"
 
+occlum new occlum_instance
 cd occlum_instance
+
 # Copy files into Occlum Workspace and build
 if [ ! -L "image/bin/python3" ];then
+    mkdir -p image/opt
     cp -rf ../python-occlum image/opt/python-occlum
     ln -s /opt/python-occlum/bin/python3 image/bin/python3
     cp -f $occlum_glibc/libdl.so.2 image/$occlum_glibc

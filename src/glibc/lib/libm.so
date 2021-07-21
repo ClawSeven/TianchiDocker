@@ -1,0 +1,4 @@
+/* GNU ld script
+*/
+OUTPUT_FORMAT(elf64-x86-64)
+GROUP ( /opt/occlum/glibc/lib/libm.so.6  AS_NEEDED ( /opt/occlum/glibc/lib/libmvec_nonshared.a /opt/occlum/glibc/lib/libmvec.so.1 ) )
