@@ -1,7 +1,8 @@
 # TianchiDocker
 Build image for Tianchi competetion
 
-# Build docker image
+## Build docker image
+
 Build docker image for tianchi competitor
 ```bash
 cd src
