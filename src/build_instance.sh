@@ -13,6 +13,7 @@ cd occlum_instance
 # Copy files into Occlum Workspace and build
 if [ ! -L "image/bin/python3" ];then
     mkdir -p image/opt
+    mkdir -p image/usr/bin
     cp -rf ../python-occlum image/opt/python-occlum
     ln -s /opt/python-occlum/bin/python3 image/bin/python3
     cp -f $occlum_glibc/libdl.so.2 image/$occlum_glibc
@@ -38,4 +39,4 @@ if [ ! -L "image/bin/python3" ];then
 fi
 
 # Build occlum instance
-Occlum build
+occlum build
